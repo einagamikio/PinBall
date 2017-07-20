@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BrightnessRegulator : MonoBehaviour {
 	//materialを入れる
@@ -17,7 +16,6 @@ public class BrightnessRegulator : MonoBehaviour {
 	private int speed = 10;
 	//ターゲットのデフォ色
 	Color defaultColor = Color.white;
-
 
 	// Use this for initialization
 	void Start()
@@ -57,10 +55,10 @@ public class BrightnessRegulator : MonoBehaviour {
 			//現在の角度を小さくする
 			this.degree -= this.speed;
 		}
-		
+
 	}
 	//衝突時に呼ばれる関数
-	void OnCollisionEnter(Collision other)
+	public void OnCollisionEnter(Collision other)
 	{
 		//角度を180に設定
 		this.degree = 180;
